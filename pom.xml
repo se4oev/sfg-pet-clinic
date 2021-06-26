@@ -30,6 +30,7 @@
     </dependencies>
 
     <build>
+        <pluginManagement>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -43,7 +44,19 @@
                     </excludes>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <goals>install</goals>
+                </configuration>
+            </plugin>
         </plugins>
+        </pluginManagement>
     </build>
+
+    <scm>
+        <developerConnection>scm:git:git@github.com:se4oev/sfg-pet-clinic.git</developerConnection>
+    </scm>
 
 </project>
